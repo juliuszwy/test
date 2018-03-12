@@ -82,6 +82,7 @@ public  class BaseController {
   public void setMessage(String message) {
     this.message = message;
   }
+  
 //  public void setPageInfo(DataGridModel pageInfo) {
 //    this.pageInfo = pageInfo;
 //  }
