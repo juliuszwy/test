@@ -82,6 +82,7 @@ public  class BaseController {
   public void setMessage(String message) {
     this.message = message;
     
+    
   }
   
   
