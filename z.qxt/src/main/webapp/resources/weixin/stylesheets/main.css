@@ -1,0 +1,105 @@
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+body, html, div, p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+}
+
+.banner img {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.info {
+    position: absolute;
+    width: 100%;
+    top: 60.45%;
+}
+
+.info img {
+    position: relative;
+    left: 5.97%;
+    width: 10%;
+}
+
+.nickname {
+    position: absolute;
+    display: block;
+    color: #ffffff;
+    font-size: 4.1vw;
+    left: 19%;
+    top: 0;
+}
+
+.roomCardNum {
+    position: absolute;
+    display: block;
+    color: #ffffff;
+    font-size: 4.1vw;
+    left: 19%;
+    top: 40%;
+}
+
+.tips {
+    font-size: 3.33vw;
+    padding-left: 3.89%;
+    padding-right: 3.89%;
+}
+
+.words {
+    color: #ff1a17;
+}
+.roomCard{
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+
+.roomCard .class1{
+	position: relative;
+    float: left;
+    width:48.5%;
+    margin-left:1%;
+    
+}
+
+.class1 img{
+    width:100%;
+}
+
+.sendCard{
+   position: absolute;
+   width:48.5%;
+   height :35%;
+   right:0;
+   top:0;
+   z-index:100;
+   margin-top: -5%;
+   margin-right: -4%;
+}
+
+.sendCard img{
+    width:100%;
+}
+.class1 span{
+	z-index:8888;
+	position: absolute;
+	right:20%;
+    top:6%;
+    color:#CD3700;
+}

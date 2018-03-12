@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- ======================define schedule task start=========================== -->
+	<!-- ======================define schedule task end=========================== -->
+
+	<!-- ======================define schedule detail start=========================== -->
+	<bean id="handleCountLogDataDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean" >
+		<property name="targetObject" ref="countTask" />
+		<property name="targetMethod" value="CountLogDay" />
+		<property name="concurrent" value="false" />
+	</bean>
+	
+	<bean id="handleTelDataDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean" >
+		<property name="targetObject" ref="countTask" />
+		<property name="targetMethod" value="telData" />
+		<property name="concurrent" value="false" />
+	</bean>
+	
+	<bean id="handleCacheDataDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="cacheTask" />
+		<property name="targetMethod" value="excute" />
+		<property name="concurrent" value="false" />
+	</bean>
+	
+	
+	<!-- ======================define schedule detail end=========================== -->
+	
+	<!-- ======================define schedule trigger start=========================== -->
+	<bean id="handleCountLogDataTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="handleCountLogDataDetail" />
+		<property name="cronExpression" value="${handle.count.log.data.cron}" />
+	</bean>
+	
+	<bean id="handleCacheTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="handleCacheDataDetail" />
+		<property name="cronExpression" value="${handle.cache.cron}" />
+	</bean>
+	<bean id="handleTelDataTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="handleTelDataDetail" />
+		<property name="cronExpression" value="${handle.tel.data.cron}" />
+	</bean>
+	
+	<!-- ======================define schedule trigger end=========================== -->
+
+
+	
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean" >
+		<property name="triggers">
+			<list>
+				<ref bean="handleCountLogDataTrigger" />
+				<!-- <ref bean="handleChannelDataTrigger" />
+				<ref bean="handleAgentDataTrigger" />
+				<ref bean="handleAgentMonthDataTrigger" /> -->
+				<ref bean="handleCacheTrigger" />
+				
+				<!-- <ref bean="handleTelDataTrigger" /> -->
+				
+			</list>
+		</property>
+	</bean>
+	
+</beans>

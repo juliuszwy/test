@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- <bean id="payCache" class="io.github.jsbd.common.lang.memcache.MemCached"
+		destroy-method="destroy" init-method="init">
+		<property name="timeToLive">
+			<value>${pay.cache.timeToLive}</value>
+		</property>
+		<property name="servers">
+			<value>${pay.cache.server}</value>
+		</property>
+		<property name="weights">
+			<value>${pay.cache.weight}</value>
+		</property>
+		<property name="cacheRegion" value="payCache"></property>
+	</bean> -->
+	
+</beans>	

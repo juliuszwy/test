@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="push-mj"
+  id="myeclipse.1439862983146"
+  context-root="/"
+  j2ee-spec="1.7"
+  archive="push-mj.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+
