@@ -36,7 +36,7 @@ public  class BaseController {
 	  boolean flag = false;
 	  try{
 		  String sign = params.remove("sign");
-		  System.out.println(sign+"-------");
+		  System.out.println(sign+"-------1111");
 		  if(sign!=null) {
 			  String string1 = WeixinPay.createSign(params, false)+"&key=" + paternerKey;  
 			  String v = DigestUtils.md5Hex(string1); 
