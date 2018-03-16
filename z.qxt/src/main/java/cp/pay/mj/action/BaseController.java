@@ -14,7 +14,7 @@ public  class BaseController {
   @SuppressWarnings("unused") 
   private static final long           serialVersionUID = -6717429260246106572L;
 
-  private String                      message;                                                      
+  private String    message;                                                      
   
   @Value("#{configProperties['realm.name']}")
   public  String realName ;
